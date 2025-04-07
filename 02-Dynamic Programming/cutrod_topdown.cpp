@@ -2,12 +2,24 @@
 
 using namespace std;
 
-int cut_rod(int p[], int n){
-    if(n == 0) return 0;
-    int q = INT_MIN;
-    for(int i = 1; i <= n; i++)
-        q = max(q,p[i] + cut_rod(p, n-i));
+int cut_rod_aux(int p[], int n, int r[]){
+    if(r[n] >= 0) return r[n];
+    int q;
+    if(n == 0) q = 0;
+    else{
+        q = INT_MIN;
+        for(int i = 1; i <= n; i++)
+            q = max(q,p[i] + cut_rod_aux(p, n-i,r));
+    }
+    r[n] = q;
     return q;
+}
+
+int cut_rod(int p[], int n){
+    int r[n+1];
+    for(int i = 0; i <= n; i++)
+        r[i] = INT_MIN;
+    return cut_rod_aux(p, n, r);
 }
 
 int main(int argc, char** argv){
