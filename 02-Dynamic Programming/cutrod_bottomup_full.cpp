@@ -53,5 +53,7 @@ int main(int argc, char** argv){
     cout << "Se obtiene de la siguiente forma:\n";
     cout << results.second;
 
+    delete[] p;
+
     return 0;
 }

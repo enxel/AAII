@@ -1,6 +1,9 @@
 {
     "files.associations": {
+        "*.embeddedhtml": "html",
+        "*.inc": "cpp",
         "*.pl": "prolog",
-        "tuple": "cpp"
+        "tuple": "cpp",
+        "iostream": "cpp"
     }
 }

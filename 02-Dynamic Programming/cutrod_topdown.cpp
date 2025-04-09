@@ -40,5 +40,7 @@ int main(int argc, char** argv){
 
     cout << cut_rod(p,n) << "\n";
 
+    delete[] p;
+
     return 0;
 }
