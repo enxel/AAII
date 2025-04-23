@@ -15,7 +15,7 @@ pair<int,string> knapsack(int V[], int S[], int n, int C){
         for(int j = 0; j <= C; j++)
             if(S[i] <= j && K[i-1][j-S[i]]+V[i] > K[i-1][j]){
                 K[i][j] = K[i-1][j-S[i]]+V[i];
-                R[i][j] = to_string(i)+", "+R[i-1][j-S[i]];
+                R[i][j] = R[i-1][j-S[i]]+", "+to_string(i);
             }
             else{
                 K[i][j] = K[i-1][j];
