@@ -14,10 +14,12 @@ pair<int,string> knapsack(int V[], int S[], int n, int C){
     for(int i = 1; i <= n; i++)
         for(int j = 0; j <= C; j++)
             if(S[i] <= j && K[i-1][j-S[i]]+V[i] > K[i-1][j]){
+                //Uso el objeto i
                 K[i][j] = K[i-1][j-S[i]]+V[i];
                 R[i][j] = R[i-1][j-S[i]]+", "+to_string(i);
             }
             else{
+                //No uso el objeto i
                 K[i][j] = K[i-1][j];
                 R[i][j] = R[i-1][j];
             }
