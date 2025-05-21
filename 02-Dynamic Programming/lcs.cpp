@@ -11,14 +11,14 @@ int lcs(string S1, string S2){
         memo[i][0] = 0;
     for(int j = 1; j <= l2; j++)
         memo[0][j] = 0;
-
+    
     for(int i = 1; i <= l1; i++)
         for(int j = 1; j <= l2; j++)
             if(S1[i-1] == S2[j-1])
                 memo[i][j] = 1 + memo[i-1][j-1];
             else
-                memo[i][j] = max(memo[i-1][j], memo[i][j-1]);
-
+                memo[i][j] = max( memo[i-1][j], memo[i][j-1]);
+    
     return memo[l1][l2];
 }
 
