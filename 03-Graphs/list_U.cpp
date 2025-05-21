@@ -18,7 +18,7 @@ class Graph{
 
         void show_adjancencies(){
             for(int i = 0; i < edges.size(); i++){
-                cout << "[";
+                cout << "[ ";
                 for(int j = 0; j < edges.at(i).size(); j++)
                     cout << edges.at(i).at(j) << " ";
                 cout << "]\n";
@@ -28,11 +28,12 @@ class Graph{
         //Se asume grafo no dirigido, y sin pesos
         void add_edge(int a, int b){
             edges.at(a).push_back(b);
-            edges.at(b).push_back(a);
+            if(a != b) edges.at(b).push_back(a);
         }
 
         void remove_edge(int a, int b){
             edges.at(a).erase( remove(edges.at(a).begin(), edges.at(a).end(), b), edges.at(a).end());
+            edges.at(b).erase( remove(edges.at(b).begin(), edges.at(b).end(), a), edges.at(b).end());
         }
 
         bool find_edge(int a, int b){
