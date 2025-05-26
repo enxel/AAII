@@ -28,12 +28,10 @@ class Graph{
         //Se asume grafo no dirigido, y sin pesos
         void add_edge(int a, int b){
             edges[a].push_back(b);
-            if(a != b) edges[b].push_back(a);
         }
 
         void remove_edge(int a, int b){
             edges[a].erase( find( edges[a].begin(), edges[a].end(), b ) );
-            edges[b].erase( find( edges[b].begin(), edges[b].end(), a ) );
         }
 
         bool find_edge(int a, int b){

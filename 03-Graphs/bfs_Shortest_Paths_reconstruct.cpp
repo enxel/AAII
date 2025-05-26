@@ -77,6 +77,7 @@ int main()
             cout << " -> " << path.top();
             path.pop();
         }
+        cout << "\n";
     }
 
     return 0;

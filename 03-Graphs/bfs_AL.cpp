@@ -18,7 +18,7 @@ vector<bool> bfs(const vector<vector<int>> &AL, int start)
             {
                 visited[neighbor] = true;
                 q.push(neighbor);
-            }
+            } 
         }
     }
     return visited;
