@@ -6,8 +6,9 @@ vector<int> bfs(const vector<vector<int>> &AL, int start)
 {
     vector<int> layers(AL.size(), -1);
     queue<int> q;
-    q.push(start);
+
     layers[start] = 0;
+    q.push(start);
     while (!q.empty())
     {
         int node = q.front();

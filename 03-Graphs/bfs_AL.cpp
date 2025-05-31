@@ -6,8 +6,9 @@ vector<bool> bfs(const vector<vector<int>> &AL, int start)
 {
     vector<bool> visited(AL.size(), false);
     queue<int> q;
-    q.push(start);
+    
     visited[start] = true;
+    q.push(start);
     while (!q.empty())
     {
         int node = q.front();
@@ -37,6 +38,7 @@ int main()
     cout << "Ingresar arista (a b): ";
     cin >> a >> b;
 
+    //El proceso se detiene al ingresar -1 -1
     while (a != -1 && b != -1)
     {
         AL[a].push_back(b);
@@ -52,11 +54,11 @@ int main()
 
     cout << "\n";
 
-    vector<bool> layers = bfs(AL, start);
+    vector<bool> visited = bfs(AL, start);
     cout << "Nodos con conexión al nodo de inicio:\n";
     for (int i = 0; i < nNodes; i++)
     {
-        cout << i << " -> " << (layers[i] ? "true" : "false") << "\n";
+        cout << i << " -> " << (visited[i] ? "true" : "false") << "\n";
     }
 
     return 0;
