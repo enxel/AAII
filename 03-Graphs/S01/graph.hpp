@@ -13,7 +13,7 @@ class Graph{
 
         void DFS_Topo(vector<int>* visited, vector<int>* f, int node, int* currLabel);
 
-        void SCC_aux(int node, vector<int>* disc, vector<int>* low, stack<int>* S, vector<bool>* stackMember, int* time);
+        void SCC_aux(int node, vector<int>* disc, vector<int>* low, stack<int>* S, vector<bool>* stackMember, int* time, int* index);
 
     public:
         Graph(int n);
