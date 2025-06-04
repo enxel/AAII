@@ -16,7 +16,7 @@ class Graph{
             }
         }
 
-        void show_adjancencies(){
+        void show_adjacencies(){
             for(int i = 0; i < edges.size(); i++){
                 cout << "[ ";
                 for(int j = 0; j < edges[i].size(); j++)
@@ -44,7 +44,7 @@ class Graph{
 int main(){
     Graph G(6);
 
-    G.show_adjancencies();
+    G.show_adjacencies();
     cout << "\n\n";
     
     G.add_edge(0,1);
@@ -55,7 +55,7 @@ int main(){
     G.add_edge(2,2); //self-loop
     G.add_edge(4,4); //self-loop
 
-    G.show_adjancencies();
+    G.show_adjacencies();
 
     return 0;
 }

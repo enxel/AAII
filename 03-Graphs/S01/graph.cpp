@@ -14,7 +14,7 @@ Graph::Graph(int n){
     }
 }
 
-void Graph::show_adjancencies(){
+void Graph::show_adjacencies(){
     for(int i = 0; i < edges.size(); i++){
         cout << "[ ";
         for(int j = 0; j < edges[i].size(); j++)

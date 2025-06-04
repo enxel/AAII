@@ -8,7 +8,7 @@ int main(void){
     G1.add_edge(2,1);
     G1.add_edge(2,3);
     G1.add_edge(3,2);
-    G1.show_adjancencies();
+    G1.show_adjacencies();
     print_vector(G1.BFS_connectivity(2));
     print_vector(G1.BFS_distances(2));
     cout << G1.BFS_path(2,1);
@@ -27,7 +27,7 @@ int main(void){
     G2.add_edge(3,0);
     G2.add_edge(3,4);
     G2.add_edge(4,3);
-    G2.show_adjancencies();
+    G2.show_adjacencies();
     print_vector(G2.BFS_connectivity(4));
     print_vector(G2.BFS_distances(4));
     cout << G2.BFS_path(4,2);

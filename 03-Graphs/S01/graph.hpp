@@ -18,7 +18,7 @@ class Graph{
     public:
         Graph(int n);
 
-        void show_adjancencies();
+        void show_adjacencies();
 
         void add_edge(int a, int b);
 
