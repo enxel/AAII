@@ -134,6 +134,27 @@ void Graph::BFS_components(){
         }
 }
 
+/*
+vector<int> Graph::DFS(int start_node){
+    vector<int> visited(num_nodes,-1);
+    stack<int> S;
+
+    visited[start_node] = 1;
+    S.push(start_node);
+    while(!S.empty()){
+        int s = S.top();
+        S.pop();
+        for( int v: edges[s] )
+            if( visited[v] == -1 ){
+                visited[v] = 1;
+                S.push(v);
+            }
+    }
+
+    return visited;
+}
+*/
+
 void Graph::DFS_aux(vector<int>* visited, int start_node, int* index){
     visited->at(start_node) = ++(*index);
     for( int v: edges[start_node] )
