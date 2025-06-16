@@ -1,4 +1,4 @@
-#include "graph.cpp"
+#include "graph.hpp"
 
 int main(void){
     Graph G1(4);

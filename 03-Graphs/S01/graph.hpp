@@ -1,3 +1,7 @@
+
+#ifndef GRAPH_HPP
+#define GRAPH_HPP
+
 #include <bits/stdc++.h>
 #define STOP -100
 using namespace std;
@@ -41,4 +45,10 @@ class Graph{
         vector<int> TopoSort();
 
         void SCCs();
+
+        //Optimal paths
+        int Dijkstra(int start_node);
 };
+
+
+#endif
