@@ -3,12 +3,11 @@
 #define GRAPH_HPP
 
 #include <bits/stdc++.h>
-#define STOP -100
 using namespace std;
 
 void print_vector(vector<int> V);
 
-class Graph{
+class Graph {
     private:
         int num_nodes;
         vector<vector<int>> edges;
@@ -40,14 +39,13 @@ class Graph{
         void BFS_components();
 
         //DFS
+        vector<int> DFS_iterative(int start_node);
+
         vector<int> DFS(int start_node);
 
         vector<int> TopoSort();
 
         void SCCs();
-
-        //Optimal paths
-        int Dijkstra(int start_node);
 };
 
 

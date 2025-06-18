@@ -1,7 +1,6 @@
 #include "graph.hpp"
 
-/*
-vector<int> Graph::DFS(int start_node){
+vector<int> Graph::DFS_iterative(int start_node){
     vector<int> visited(num_nodes,-1);
     stack<int> S;
 
@@ -19,7 +18,6 @@ vector<int> Graph::DFS(int start_node){
 
     return visited;
 }
-*/
 
 void Graph::DFS_aux(vector<int>* visited, int start_node, int* index){
     visited->at(start_node) = ++(*index);

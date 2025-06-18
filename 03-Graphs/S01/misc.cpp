@@ -5,7 +5,3 @@ void print_vector(vector<int> V){
         cout << V[i] << " ";
     cout << "\n";
 }
-
-int Graph::Dijkstra(int s){
-    
-}
