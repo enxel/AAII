@@ -1,4 +1,5 @@
 #include "graph.hpp"
+#define STOP -100
 
 vector<int> Graph::BFS_connectivity(int start_node){
     vector<int> visited(num_nodes,-1);
