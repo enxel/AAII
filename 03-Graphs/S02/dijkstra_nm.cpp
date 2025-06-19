@@ -39,7 +39,7 @@ vector<int> dijkstra(
         pair<int, int> u = getMin(candidates);
 
         // Si el candidato ya ha sido alcanzado antes, ya se tiene la ruta mas corta, omitir
-        if (dist[u.first] != INT_MAX)
+        if (dist[u.first] <= u.second)
         {
             cout << " pero (" << u.first << ") tiene distancia " << dist[u.first] << " [mejor]\n";
 
