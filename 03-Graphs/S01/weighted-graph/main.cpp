@@ -40,7 +40,7 @@ int main(void){
     G2.add_edge(8,9,1);
     G2.add_edge(8,10,3);
     G2.add_edge(9,10,1);
-    G2.Dijkstra(2);
+    G2.Dijkstra(2); //Third node
     G2.Dijkstra_Heap(2);
     cout << G2.Dijkstra_Reco(2,10) << "\n";
 
