@@ -9,6 +9,8 @@ using namespace std;
 vi dijkstra(vector<vpii> &AL, int start)
 {
     vi dists(AL.size(), INT_MAX);
+    // Usamos una cola de prioridad para obtener el candidato mas prometedor
+    // La cola de prioridad se ordena por el primer elemento del par (costo)
     priority_queue<pii, vpii, greater<pii>> pq;
 
     pq.emplace(0, start);
