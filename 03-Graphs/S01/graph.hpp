@@ -7,6 +7,8 @@
 using namespace std;
 
 void print_vector(vector<int> V);
+vector<int> order_builder(vector<int> A);
+bool DAG_checker(vector<int> T, vector<vector<int>> edges);
 
 class Graph {
     private:
@@ -29,6 +31,8 @@ class Graph {
         void remove_edge(int a, int b);
 
         bool find_edge(int a, int b);
+
+        vector<vector<int>> get_edges();
 
         //BFS
         vector<int> BFS_connectivity(int start_node);

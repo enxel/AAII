@@ -72,19 +72,24 @@ int main(int argc, char** argv){
     cout << "Listas de adyacencias del Grafo 1:\n";
     G1.show_adjacencies();
     cout << "\nVector de conectividades [Respuesta Ejercicio 1]:\n";
-    print_vector(G1.BFS_connectivity(atoi(argv[2])));
+    print_vector(G1.BFS_connectivity(atoi(argv[2]) - ((index_base==0)?0:1)));
     cout << "\nComponentes [Respuesta Ejercicio 3]:\n";
     G1.BFS_components();
     cout << "\nListas de adyacencias del Grafo 1.7:\n";
     G2.show_adjacencies();
     cout << "\nTopological Sort [Respuesta Ejercicio 6]:\n";
-    print_vector(G2.TopoSort());
+    vector<int> topo = G2.TopoSort();
+    vector<int> ordered = order_builder(topo);
+    print_vector(topo);
+    //print_vector(ordered);
+    if(DAG_checker(ordered, G2.get_edges())) cout << "****** SÍ ES DAG *******\n";
+    else cout << "****** NO ES DAG *******\n";
     cout << "\nStrongly Connected Components (Tarjan) [Respuesta Ejercicio 7]:\n";
     G1.SCCs();
     cout << "\nListas de adyacencias del Grafo 2:\n";
     G3.show_adjacencies();
     cout << "\nDijkstra path lengths [Respuesta Ejercicio 8]:\n";
-    G3.Dijkstra_Heap(atoi(argv[3]));
+    G3.Dijkstra_Heap(atoi(argv[3]) - ((index_base==0)?0:1));
 
     return 0;
 }

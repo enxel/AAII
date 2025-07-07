@@ -28,3 +28,7 @@ void Graph::remove_edge(int a, int b){
 bool Graph::find_edge(int a, int b){
     return find( edges[a].begin(), edges[a].end(), b ) != edges[a].end();
 }
+
+vector<vector<int>> Graph::get_edges(){
+    return edges;
+}
