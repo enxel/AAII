@@ -80,10 +80,10 @@ int main(int argc, char** argv){
     cout << "\nTopological Sort [Respuesta Ejercicio 6]:\n";
     vector<int> topo = G2.TopoSort();
     vector<int> ordered = order_builder(topo);
-    print_vector(topo);
-    //print_vector(ordered);
     if(DAG_checker(ordered, G2.get_edges())) cout << "****** SÍ ES DAG *******\n";
     else cout << "****** NO ES DAG *******\n";
+    print_vector(topo);
+    //print_vector(ordered);
     cout << "\nStrongly Connected Components (Tarjan) [Respuesta Ejercicio 7]:\n";
     G1.SCCs();
     cout << "\nListas de adyacencias del Grafo 2:\n";
