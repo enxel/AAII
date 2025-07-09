@@ -70,7 +70,9 @@ Where:
 - *Q1* refers to Question 1 in the exam.
 - *Q2* refers to Question 8 in the exam.
 
-> ⚠️ **WARNING:** There is an exam-key in which all graphs except Graph 2 use 1-indexation, so even if Question 8 on this key says `0` for the start node, use `1` when running the program.
+> ⚠️ **WARNING:** There is an exam-key in which all graphs except Graph 2 use 1-indexation, in this key Question 8 uses 0-indexation. Luckily, very few students actually did Question 8, but for those that did it there are two ways to go about it:
+- When placing Graph 2 in input.txt, manually add 1 to all indices.
+- Run the program twice: one using 1-indexation with Graph 1 and Graph 1.7 as used by the student and using a generic 1-node-no-edges graph for Graph 2; and the other one using 0-indexation with Graph 2 as used by the student and using a generic 1-node-no-edges graph for Graph 1 and for Graph 1.7.
 
 ---
 
