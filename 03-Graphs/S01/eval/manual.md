@@ -61,12 +61,14 @@ The format for this data is as follows:
 
 The program is meant to be run on **Ubuntu** (or a similar Linux distro) and must be run from the command line using the following syntax:  
 
-        ./e <index basis> <start node for Question 1 in the exam> <start node for Question 8 in the exam>
+        cat input.txt | ./e <index basis> <start node for Q1> <start node for Q8>
 
 
 Where:  
+- *cat input.txt* is used to convert the text file into a "cin input" for the e program.
 - *index_basis*: this is either `0` or `1`, and indicates the starting point for the node enumeration used by the student for their graphs.  
-- The other two parameters are self-explanatory.  
+- *Q1* refers to Question 1 in the exam.
+- *Q2* refers to Question 8 in the exam.
 
 > ⚠️ **WARNING:** There is an exam-key in which all graphs except Graph 2 use 1-indexation, so even if Question 8 on this key says `0` for the start node, use `1` when running the program.
 
