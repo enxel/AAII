@@ -84,3 +84,11 @@ Where:
 
 
 The idea is that the exam has **8 questions**, and each question must be graded from **1 to 10**, so the total obtained is a **grade out of 80 maximum points**. This program converts this result to a **normal grade from 1 to 10** for the exam and the student.
+
+## Compilation of `e` and `n`
+
+To compile the programs, input the following commands in the Terminal:
+
+>g++ -o e main.cpp ../graph.cpp ../wgraph.cpp ../bfs.cpp ../dfs.cpp ../dijkstra.cpp ../misc.cpp
+
+>g++ -o n nota.cpp
